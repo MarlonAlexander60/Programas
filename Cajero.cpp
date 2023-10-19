@@ -1,25 +1,24 @@
-//Autor:MarlonVega
-//Fecha:05-10-2023
-//Programa:Seguridad
+//Programa:Cajero Automatico
+//Autor:Vega Robles
+//Fecha:12-10-2023
+//Archivo:CajeroAutomatico.cpp
 #include<iostream>
 using namespace std;
 int main()
 {
-int c11,c12,c13,c01,c02,c03;
-cout<<"Ingrese las contraseñas c11 c12 c13";
-cin>>c11>>c12>>c13;
-if(c11==c01){
-if(c12==c02){
-if(c13==c03){
-cout<<"ACCESO AUTORIZADO";
+int c1,c2,c3,c01=22,c02=50,c03=30;
+float valor,saldodisponible=10.000;
+cout<<"Ingrese c1 c2 c3:";cin>>c1>>c2>>c3;
+if(c1==c01){
+if(c2==c02){
+if(c3==c03){
+cout<<"Ingrese el valor a retirar:";cin>>valor;
+saldodisponible=saldodisponible-valor;
 }else{
-cout<<"La Tercera Contraseña No Fue Correcta"<<endl;
-}
+cout<<"contraseña c3 incorrecta"<<endl;}
 }else{
-cout<<"La Segunda Contraseña No Fue Correcta"<<endl;
-}
+cout<<"contraseña c2 incorrecta"<<endl;}
 }else{
-cout<<"La Primera Contraseña No Fue Correcta"<<endl;
-}
+	cout<<"contraseña c1 incorrecta"<<endl;}
 return(0);
 }
